@@ -8,6 +8,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: 0.5s;
     & > nav {
         width: 70%;
         > ul{
@@ -66,12 +67,12 @@ section.full-banner {
     background: #ffe45c;
     color: #242424;
 }
-.button-disabled {
+button.disabled {
     background: none;
     border: solid 0.5px rgba(36, 36, 36, 0.8);
 }
-.button-disabled:hover {
-    background: rgba(36, 36, 36, 0.8);
+button.disabled:hover {
+    background: rgba(36, 36, 36, 0.2);
 }
 
 button {
