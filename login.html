@@ -27,22 +27,23 @@
     </header>
     <section class="full-banner-form">
         <div class="container-login">
-            <form class="form-login" >
+            <form class="form-login" method="post">
                 <label for="login">
                     CPF*:
-                    <input type="text" name="login" id="login" placeholder="Digite o CPF"/>
+                    <input type="text" name="login" required id="login" placeholder="Digite o CPF"
+                        oninvalid="this.setCustomValidity('Preencha o campo CPF')" oninput="this.setCustomValidity('')"/>
                 </label>
                 <label for="password">
                     Senha*:
-                    <input type="password" name="password" id="password" placeholder="Digite sua senha"/>
+                    <input type="password" name="password" required id="password" placeholder="Digite sua senha"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="A senha deve conter uma letra maiúscula, minúscula, um número e 8 caracteres"/>
                 </label>
                 <button type="submit">continuar</button>
                 <p><a href="#">Esqueci minha senha</a></p>
                 <p><a href="#">Ainda não sou cliente</a></p>
             </form>
-        </div>
-     
-            
+        </div>             
     </section>
     <footer></footer>
     <script>
@@ -67,7 +68,14 @@
       });
 
     </script>
+    <script type="text/javascript" src="assets/js/main.js" ></script>
 </body>
 </html>
 
 <!-- header>div+nav>ul>li*5 -->
+
+<!-- elementos de linha: nãp possuem largira, altura posicionamento-->
+ <!-- <span> <a> <strong> <i><s>-->
+
+    <!-- alterar esse comportamento -->
+    <!-- display: block; inline-block; flex; inline-flex;  -->

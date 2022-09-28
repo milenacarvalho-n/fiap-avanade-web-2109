@@ -7,8 +7,11 @@
     background: #dddcda;
     .container-login {
         width: 420px;
-        height: 40vh;
+        height: 45vh;
         display: flex;
+        background: #fff;
+        padding: 20px 0px 20px 0px;
+        border: solid 1px rgb(161, 46, 46);
         form {
             width: 100%;
             display: flex;

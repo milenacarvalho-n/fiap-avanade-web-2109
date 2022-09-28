@@ -35,10 +35,11 @@
             <button>nossos produtos</button>        
         </div>       
     </section>
-    <footer></footer>
+    <footer class="footer-bottom"> Sou o </footer>
     <script>
         const header = document.querySelector('.top-site');
         const button = document.querySelector('.top-button');
+        const body = document.querySelector("body")
         header.style.background = "none";
         button.classList.add('disabled');
         // janela e site
@@ -48,13 +49,27 @@
         // Criamos uma escuta para um evento 
 
       window.addEventListener('scroll', (event)=>{
-        if(window.scrollY != 0){
-            header.style.background = "#fff";  
-            button.classList.remove("disabled"); 
-        }else{
-            header.style.background = "none";  
-            button.classList.add('disabled');
-        }
+        console.log(body.clientHeight); //altura total - 1000px
+        // mudar header para preto e cor branca
+        // if(window.scrollY != 0){
+        //     header.style.background = "#fff";  
+        //     button.classList.remove("disabled"); 
+        // }else if (scrollY >= body.clientHeight - 1000) {
+        //     header.style.background = "#222";
+        // }else{
+        //     header.style.background = "none";  
+        //     button.classList.add('disabled');
+        // }
+        if (scrollY < 100) {   //100 significa que rolou 100px no cursor
+                button.classList.add("disabled");
+                header.style.background = "none";
+            } else if (scrollY >= body.clientHeight - 1000){
+                header.style.background = '#222';
+            } else {
+                header.style.background = '#fff';
+                button.classList.remove("disabled");
+            }
+
       });
 
     </script>

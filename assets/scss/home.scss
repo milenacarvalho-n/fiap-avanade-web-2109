@@ -62,7 +62,15 @@ section.full-banner {
         }
     }    
 }
-
+footer {
+    border: solid 1px red;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background: #222;
+    width:100%;
+    height: 40vh;
+}
 ::selection {
     background: #ffe45c;
     color: #242424;
