@@ -42,3 +42,13 @@ console.log(data, 'retornando dados da API');
 
 // dominar a linguagem
 // funções, arrays, eventos, assíncrono , estrutura de controle e loops, objetos, controle de fluxo
+
+const body = document.querySelector('body');
+body.style.width = "100%";
+body.style.height = "100%";
+
+
+body.addEventListener("mouseover", (event)=> {
+    body.style.backgroundColor = "#d4d4d4";
+
+});
